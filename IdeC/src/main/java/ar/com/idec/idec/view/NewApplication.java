@@ -255,7 +255,7 @@ public class NewApplication extends javax.swing.JFrame {
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
         // TODO add your handling code here:
-        this.setSize(333, 333);
+        this.jDialog1.setSize(450, 150);
         this.jDialog1.dispose();
         this.jDialog1.setEnabled(true);
         this.jDialog1.setVisible(true);
