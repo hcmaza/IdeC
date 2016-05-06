@@ -46,6 +46,8 @@ public class NewApplication extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
+        jDialog1 = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane(doc);
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -64,6 +66,25 @@ public class NewApplication extends javax.swing.JFrame {
         helpMenu = new javax.swing.JMenu();
         contentsMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
+
+        jLabel1.setText("IdeC es un editor de Lenguaje C/C++\\n realizado en Java");
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IdeC");
@@ -147,6 +168,11 @@ public class NewApplication extends javax.swing.JFrame {
 
         aboutMenuItem.setMnemonic('a');
         aboutMenuItem.setText("About");
+        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutMenuItemActionPerformed(evt);
+            }
+        });
         helpMenu.add(aboutMenuItem);
 
         menuBar.add(helpMenu);
@@ -160,8 +186,8 @@ public class NewApplication extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 524, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -227,6 +253,15 @@ public class NewApplication extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_saveMenuItemActionPerformed
 
+    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
+        // TODO add your handling code here:
+        this.setSize(333, 333);
+        this.jDialog1.dispose();
+        this.jDialog1.setEnabled(true);
+        this.jDialog1.setVisible(true);
+        
+    }//GEN-LAST:event_aboutMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -272,7 +307,9 @@ public class NewApplication extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
